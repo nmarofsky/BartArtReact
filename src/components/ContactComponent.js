@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Breadcrumb, BreadcrumbItem, Button, Label, Col, Row } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import { Control, Form, Errors, actions } from 'react-redux-form';
+import { Control, Form, Errors } from 'react-redux-form';
 
 const required = val => val && val.length;
 const maxLength = len => val => !val || (val.length <= len);
@@ -42,8 +42,8 @@ class Contact extends Component {
 
         return (
             <div className="container">
-                <div className="row">
-                    <div className="col">
+                <div className="row mt-5">
+                    <div className="col mt-5">
                         <Breadcrumb>
                             <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
                             <BreadcrumbItem active>Contact Us</BreadcrumbItem>
@@ -57,19 +57,19 @@ class Contact extends Component {
                     <div className="col-sm-4">
                         <h5>Our Address</h5>
                         <address>
-                            1 Nucamp Way<br />
-                            Seattle, WA 98001<br />
+                            1 Bart Way<br />
+                            Rehobeth Beach, DE 19958<br />
                             U.S.A.
                         </address>
                     </div>
                     <div className="col">
-                        <a role="button" className="btn btn-link" href="tel:+12065551234"><i className="fa fa-phone"></i> 1-206-555-1234</a><br />
-                        <a role="button" className="btn btn-link" href="mailto:fakeemail@fakeemail.co"><i className="fa fa-envelope-o"></i> campsites@nucamp.co</a>
+                        <a role="button" className="btn btn-link" href="tel:+17174518742"><i className="fa fa-phone"></i> (717) 451-8742</a><br />
+                        <a role="button" className="btn btn-link" href="mailto:bartart@gmail.com"><i className="fa fa-envelope-o"></i> bartart@gmail.com</a>
                     </div>
                 </div>
                 <div className="row row-content">
                     <div className="col-12">
-                      <h2>Send us your Feedback</h2>
+                      <h2>Send Dan Your Feedback</h2>
                       <hr />
                     </div>
                     <div className="col-md-10">

@@ -19,7 +19,7 @@ function RenderCampsite({campsite}) {
                     exitTransform: 'scale(0.5) translateY(-50%)'
                 }}>
                 <Card>
-                    <CardImg top src={baseUrl + campsite.image} alt={campsite.name} />
+                    <CardImg top src={baseUrl + campsite.info} alt={campsite.name} />
                     <CardBody>
                         <CardText>{campsite.description}</CardText>
                     </CardBody>
@@ -33,7 +33,7 @@ function RenderComments({comments, postComment, campsiteId}) {
     if (comments) {
         return (
             <div className= "col-md-5 m-1">
-                <h4>Comments</h4>
+                <h2>Comments</h2>
                 <Stagger in>
                     {comments.map(comment => {
                         return (
@@ -79,8 +79,8 @@ function CampsiteInfo(props) {
     
         return (
             <div className="container">
-                <div className="row">
-                    <div className="col">
+                <div className="row mt-5">
+                    <div className="col mt-5">
                         <Breadcrumb>
                             <BreadcrumbItem><Link to="/directory">Directory</Link></BreadcrumbItem>
                             <BreadcrumbItem active>{props.campsite.name}</BreadcrumbItem>
@@ -97,6 +97,7 @@ function CampsiteInfo(props) {
                         campsiteId={props.campsite.id} 
                     />
                 </div>
+                <br />
             </div>
         );
     }

@@ -6,6 +6,7 @@ import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Home from './HomeComponent';
 import Contact from './ContactComponent';
+import Reservation from './ReserveComponent';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { actions } from 'react-redux-form';
@@ -80,6 +81,7 @@ class Main extends Component {
                         <Route path='/home' component={HomePage} />
                         <Route exact path='/directory' render={() => <Directory campsites={this.props.campsites} />} />
                         <Route path='/directory/:campsiteId' component={CampsiteWithId} />
+                        <Route path='/reserve' render={() => <Reservation />}/>
                         <Route exact path='/about' render={() => <About partners={this.props.partners} />} />
                         <Route exact path='/contactus' render={() => <Contact resetFeedbackForm={this.props.resetFeedbackForm} postFeedback={this.props.postFeedback} /> } />
                         <Redirect to='/home' />
