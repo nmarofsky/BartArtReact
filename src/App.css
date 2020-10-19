@@ -62,7 +62,6 @@ h2 {
 
 .Container {
   position: relative;
-  width: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -289,4 +288,9 @@ section {
 
 .react-rounded-image > img { 
   width: 100%; 
+}
+
+.navlogo {
+    width: 80%;
+    height: auto
 }

@@ -66,7 +66,7 @@ class Header extends Component {
                     <Jumbotron fluid>
                     <div style={styles.container}>
                     <MenuButton open={this.state.menuOpen} onClick={()=>this.handleMenuClick()} color='white' sticky='top'/>
-                    <div style={styles.logo}><a href="/home"><img src="/assets/images/logo_transparent.png" alt="NuCamp Logo"/></a></div>
+                    <div style={styles.logo}><a href="/home"><img className="navlogo" src="/assets/images/logo_transparent.png" alt="BartArt Logo"/></a></div>
                     </div>
                     </Jumbotron>
                     <Menu open={this.state.menuOpen}>

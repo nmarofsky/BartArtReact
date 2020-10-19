@@ -34,8 +34,8 @@ function Directory(props) {
     
         const directory = props.campsites.campsites.map(campsite => {
             return (
-                <div key={campsite.id} className="col-xs-12 col-md-5 m-1">
-                   <RenderDirectoryItem campsite={campsite}/> 
+                <div key={campsite.id} className="col-xs-12 col-md-6">
+                    <RenderDirectoryItem campsite={campsite}/> 
                 </div>
             );
         });
@@ -51,9 +51,9 @@ function Directory(props) {
         }
         if (props.campsites.errMess) {
             return (
-                <div className="container">
-                    <div className="row"> 
-                        <div className="col">
+                <div className="container mt-5">
+                    <div className="row mt-5"> 
+                        <div className="col mt-5">
                             <h4>{props.campsites.errMess}</h4>
                         </div>
                     </div>
@@ -73,8 +73,10 @@ function Directory(props) {
                         <hr />
                     </div>
                 </div>
-                <div className="row">
-                    {directory}
+                <div className="container">
+                    <div className="row">
+                        {directory}
+                    </div>
                 </div>
             </div>
         );
