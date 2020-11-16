@@ -1,6 +1,6 @@
 import React, { Component }  from 'react';
 import {  NavItem, Jumbotron } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 class Header extends Component {
 
@@ -27,8 +27,8 @@ class Header extends Component {
               top: 0,
               left: 0,
               zIndex: '99',
-              opacity: 0.9,
-              marginBottom: '.50rem',
+              opacity: 1,
+              marginBottom: '.60rem',
               display:'flex',
               alignItems:'center',
               background: '#CEC8FF',
@@ -66,7 +66,7 @@ class Header extends Component {
                     <Jumbotron fluid>
                     <div style={styles.container}>
                     <MenuButton open={this.state.menuOpen} onClick={()=>this.handleMenuClick()} color='white' sticky='top'/>
-                    <div style={styles.logo}><a href="/home"><img className="navlogo" src="/assets/images/logo_transparent.png" alt="BartArt Logo"/></a></div>
+                    <div style={styles.logo}><Link to="/home"><img className="navlogo" src="/assets/images/logo_transparent.png" alt="BartArt Logo"/></Link></div>
                     </div>
                     </Jumbotron>
                     <Menu open={this.state.menuOpen}>
@@ -144,7 +144,7 @@ class Header extends Component {
             fontSize: '1.2rem',
             padding: '1rem 0',
             margin: '0 5%',
-            marginTop: 55,
+            marginTop: 25,
             cursor: 'pointer',
             color: this.state.hover? 'gray':'#fafafa',
             transition: 'color 0.2s ease-in-out',

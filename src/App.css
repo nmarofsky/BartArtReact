@@ -186,7 +186,7 @@ h2 {
 }
 
 section {
-  padding: 100px 0;
+  padding: 50px 0;
 }
 
 .price-table {
@@ -282,8 +282,13 @@ section {
   border-bottom-right-radius: 30%;
 }
 
+.carousel {
+  width:50%;
+  margin: auto
+}
+
 .carousel-item > img { 
-  width: 50%; 
+  width: 100%; 
 }
 
 .react-rounded-image > img { 
@@ -293,4 +298,67 @@ section {
 .navlogo {
     width: 80%;
     height: auto
+}
+
+.box {
+  width: auto;
+  position: relative;
+  margin: 0;
+  padding:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  background: #FFA81E ;
+}
+
+h1 {
+  margin: 0;
+  padding: 10;
+  color:#824c96;
+  font-size: 20vw;
+}
+
+h1 span {
+  display: table-cell;
+  margin: 0;
+  padding: 0;
+  animation: animate 3s linear infinite;
+}
+
+h1 span:nth-child(1) {
+  animation-delay: 0s;
+}
+h1 span:nth-child(2) {
+  animation-delay: 0.25s;
+}
+h1 span:nth-child(3) {
+  animation-delay: 0.5s;
+}
+h1 span:nth-child(4) {
+  animation-delay: 0.75s;
+}
+h1 span:nth-child(5) {
+  animation-delay: 1s;
+}
+h1 span:nth-child(6) {
+  animation-delay: 1.25s;
+}
+h1 span:nth-child(7) {
+  animation-delay: 1.5s;
+}
+
+@keyframes animate {
+  0%, 100%
+  {
+    color: #824c96;
+    filter: blur(2px);
+    text-shadow: 0 0 10px #824c96;
+  }
+  5%, 95%
+  {
+    color: #fff;
+    filter: blur(0px);
+    text-shadow: 0 0 0px none;
+  }
 }
